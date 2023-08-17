@@ -39,8 +39,7 @@ public class WordCount {
                 out.collect(Tuple2.of(word,1L));
             }
             //  java lambda 存在泛型擦除,将指定泛型
-        } )
-                .returns(Types.TUPLE(Types.STRING,Types.LONG));
+        } ).returns(Types.TUPLE(Types.STRING,Types.LONG));
 
         // 按照word进行分组, 按照Tuple 二元组的数组顺序选择key
         UnsortedGrouping<Tuple2<String, Long>> wordTupleGroup = wordTuple.groupBy(0);
