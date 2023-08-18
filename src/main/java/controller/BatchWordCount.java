@@ -21,14 +21,14 @@ import org.apache.flink.util.Collector;
  * @author: lichen
  * @create: 2023/08/17 12:00 
  */
-public class WordCount {
+public class BatchWordCount {
 
     public static void main(String[] args) throws Exception {
         // 创建执行环境
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 
         // 读取文件
-        DataSource<String> lineDataSource = env.readTextFile("/Users/lichen/IdeaProjects/flinkDemo/src/main/input/WordCount.txt");
+        DataSource<String> lineDataSource = env.readTextFile("/Users/lichen/IdeaProjects/flink/src/main/input/WordCount.txt");
 
         // 将每行数据进行分词，转成二元组类型
         FlatMapOperator<String,Tuple2<String,Long>> wordTuple = lineDataSource.flatMap((String line, Collector<Tuple2<String,Long>> out) ->{
