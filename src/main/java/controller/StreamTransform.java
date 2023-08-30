@@ -27,7 +27,7 @@ import java.util.List;
  * @author: lichen
  * @create: 2023/08/22 12:06 
  */
-public class StreamCustomDemo {
+public class StreamTransform {
 
     public static void main(String[] args) throws Exception {
 

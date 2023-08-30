@@ -22,7 +22,7 @@ import java.util.List;
  * @author: lichen
  * @create: 2023/08/28 11:25 
  */
-public class StreamShuffle {
+public class StreamPhySlot {
 
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();

@@ -26,7 +26,7 @@ import java.util.List;
  * @author: lichen
  * @create: 2023/08/25 18:50 
  */
-public class StreamKeyByReduce {
+public class StreamTransFormPro {
 
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();

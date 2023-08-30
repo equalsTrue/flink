@@ -26,7 +26,7 @@ import java.util.Properties;
  * @author: lichen
  * @create: 2023/08/21 17:40 
  */
-public class StreamDemo {
+public class StreamSource {
 
     public static void main(String[] args) throws Exception {
 

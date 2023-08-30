@@ -21,7 +21,7 @@ import org.apache.flink.util.Collector;
  * @author: lichen
  * @create: 2023/08/17 12:00 
  */
-public class BatchWordCount {
+public class StreamTest {
 
     public static void main(String[] args) throws Exception {
         // 创建执行环境
