@@ -41,7 +41,8 @@ public class StreamFileSink {
         eventList.add(new Event("david","/pro?id=3",null));
         DataStreamSource<Event> dataSource = env.fromCollection(eventList);
         // stream 分布式文件写入 ，将文件拆分到bucket写入， forRowFormat 文件按行写入， sinkFunction
-        StreamingFileSink<String> streamingFileSink = StreamingFileSink.<String>forRowFormat(new Path("./output"),
+        StreamingFileSink<String> streamingFileSink = StreamingFileSink
+                .<String>forRowFormat(new Path("./output"),
                         new SimpleStringEncoder<>("utf-8"))
                 // 滚动策略
                 .withRollingPolicy(DefaultRollingPolicy.builder()
