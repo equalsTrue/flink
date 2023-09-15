@@ -1,4 +1,4 @@
-package controller;/**
+package controller.trans;/**
  * @program flink
  * @description: stream word count
  * @author: lichen

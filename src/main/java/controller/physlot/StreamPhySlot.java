@@ -1,4 +1,4 @@
-package controller;/**
+package controller.physlot;/**
  * @program flink
  * @description: 物理分区
  * @author: lichen
@@ -6,12 +6,16 @@ package controller;/**
  */
 
 import model.Event;
+import org.apache.flink.api.common.eventtime.WatermarkGenerator;
+import org.apache.flink.api.common.eventtime.WatermarkGeneratorSupplier;
+import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.functions.Partitioner;
 import org.apache.flink.api.common.typeinfo.Types;
 import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.source.RichParallelSourceFunction;
+import source.EventSource;
 
 import java.util.ArrayList;
 import java.util.List;

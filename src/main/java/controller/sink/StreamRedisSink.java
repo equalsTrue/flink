@@ -1,4 +1,4 @@
-package controller;/**
+package controller.sink;/**
  * @program flink
  * @description: stream redis sink
  * @author: lichen

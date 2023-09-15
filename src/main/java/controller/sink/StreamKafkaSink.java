@@ -1,4 +1,4 @@
-package controller;/**
+package controller.sink;/**
  * @program flink
  * @description: flink kafka sink
  * @author: lichen

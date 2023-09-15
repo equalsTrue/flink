@@ -1,4 +1,4 @@
-package controller;/**
+package controller.source;/**
  * @program flink
  * @description: stream api demo
  * @author: lichen

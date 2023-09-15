@@ -1,4 +1,4 @@
-package controller;/**
+package controller.sink;/**
  * @program flink
  * @description: 输出
  * @author: lichen
@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 public class StreamFileSink {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        env.setParallelism(4);
+        env.setParallelism(3);
         List<Event> eventList = new ArrayList<>();
         eventList.add(new Event("jack","/pro?id=1",null));
         eventList.add(new Event("flink","/pro?id=2",null));
