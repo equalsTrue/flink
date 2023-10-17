@@ -19,6 +19,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
 
 /**
  * @program flink
@@ -66,7 +67,6 @@ public class StreamTransFormPro {
                 return value1.f1 > value2.f1 ? value1 : value2;
             }
         }).returns(Types.TUPLE(Types.STRING, Types.LONG)).print("reduce inner class max: ");
-
         // reduce lambda
        clickCount.keyBy(data -> "name").reduce((s1,s2) ->{
             if(s1.f1 > s2.f1){

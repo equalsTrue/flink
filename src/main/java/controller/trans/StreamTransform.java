@@ -33,7 +33,7 @@ public class StreamTransform {
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
-        env.setParallelism(3);
+        env.setParallelism(2);
 
 //        DataStreamSource<Event> eventDataStreamSource = env.addSource(new EventSource());
 
@@ -116,7 +116,6 @@ public class StreamTransform {
                 return tuple2.f0;
             }
         }).sum(1);
-
 
         sum.print();
 
